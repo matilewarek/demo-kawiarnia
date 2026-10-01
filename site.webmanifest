@@ -1,0 +1,13 @@
+{
+  "name": "Kawiarnia Pod Orzechem",
+  "short_name": "Pod Orzechem",
+  "lang": "pl",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#fbf5ea",
+  "theme_color": "#fbf5ea",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,20 @@
+# Sekrety
+.env
+.env.*
+*.pem
+*.key
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Edytory i narzędzia
+.vscode/
+.idea/
+node_modules/
+.wrangler/
+*.log
+
+# Surowe zdjęcia (nie publikuj)
+img/raw/

@@ -1,0 +1,292 @@
+/* ==========================================================
+   USTAWIENIA – tu zmieniasz wygląd pod klienta.
+   Kontrast tekstu do tła sprawdzony (min. 4.5:1, WCAG AA).
+   ========================================================== */
+:root {
+  /* Kolory */
+  --kolor-tlo: #fbf5ea;           /* kremowe tło strony */
+  --kolor-tlo-alt: #f2e8d8;       /* tło co drugiej sekcji */
+  --kolor-tekst: #3a2a20;         /* espresso */
+  --kolor-tekst-jasny: #6b5646;   /* tekst pomocniczy */
+  --kolor-akcent: #33723a;        /* zieleń liści: przyciski, linki */
+  --kolor-akcent-ciemny: #285a2e; /* przycisk po najechaniu */
+  --kolor-akcent-blady: #e4eddb;  /* tło znaczników „wege” */
+  --kolor-na-akcencie: #ffffff;   /* tekst na przycisku */
+  --kolor-ciemny: #2e2019;        /* stopka */
+  --kolor-na-ciemnym: #f7eedd;    /* tekst na ciemnym tle */
+  --kolor-linia: #dccbb2;         /* ramki i kropki (dekoracyjne) */
+  --kolor-blad: #b91c1c;
+  --kolor-sukces: #166534;
+
+  /* Fonty (lokalne, z katalogu fonts/) */
+  --font: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-naglowek: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* Odstępy i zaokrąglenia */
+  --odstep: 1rem;
+  --odstep-sekcji: 5rem;
+  --promien: 1rem;
+  --promien-duzy: 1.75rem;
+  --szerokosc: 68rem;
+}
+
+/* ---------- Fonty ---------- */
+@font-face {
+  font-family: "Nunito Sans"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("/fonts/nunito-sans-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito Sans"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("/fonts/nunito-sans-latin-ext-400.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Nunito Sans"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("/fonts/nunito-sans-latin-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Nunito Sans"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("/fonts/nunito-sans-latin-ext-700.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Fraunces"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("/fonts/fraunces-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("/fonts/fraunces-latin-ext-600.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Fraunces"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("/fonts/fraunces-latin-400-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("/fonts/fraunces-latin-ext-400-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---------- Baza ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--kolor-tekst);
+  background: var(--kolor-tlo);
+}
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--font-naglowek); font-weight: 600; line-height: 1.15; margin: 0 0 var(--odstep); }
+h1 { font-size: clamp(2.25rem, 8vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 5.5vw, 2.5rem); }
+h3 { font-size: 1.375rem; }
+h1 em, h2 em { font-weight: 400; color: var(--kolor-akcent); }
+p { margin: 0 0 var(--odstep); }
+a { color: var(--kolor-akcent); }
+a:hover { color: var(--kolor-akcent-ciemny); }
+
+/* Widoczny focus dla klawiatury */
+:focus-visible { outline: 3px solid var(--kolor-akcent); outline-offset: 3px; }
+.ciemne :focus-visible, .stopka :focus-visible { outline-color: #ffffff; }
+
+.kontener { width: 100%; max-width: var(--szerokosc); margin: 0 auto; padding: 0 var(--odstep); }
+
+/* Link „Przejdź do treści" – widoczny dopiero po Tab */
+.przejdz {
+  position: absolute; left: var(--odstep); top: -4rem; z-index: 100;
+  background: var(--kolor-akcent); color: var(--kolor-na-akcencie);
+  padding: 0.5rem 1rem; border-radius: var(--promien);
+}
+.przejdz:focus { top: var(--odstep); color: var(--kolor-na-akcencie); }
+
+/* ---------- Przyciski ---------- */
+.przycisk {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  border: 2px solid var(--kolor-akcent);
+  border-radius: 999px;
+  background: var(--kolor-akcent);
+  color: var(--kolor-na-akcencie);
+  font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+}
+.przycisk:hover { background: var(--kolor-akcent-ciemny); border-color: var(--kolor-akcent-ciemny); color: var(--kolor-na-akcencie); }
+.przycisk:disabled { opacity: 0.55; cursor: not-allowed; }
+.przycisk--kontur { background: transparent; color: var(--kolor-akcent); }
+.przycisk--kontur:hover { background: var(--kolor-akcent); color: var(--kolor-na-akcencie); }
+
+/* ---------- Nagłówek i menu ---------- */
+.naglowek {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--kolor-tlo); color: var(--kolor-tekst);
+  border-bottom: 1px solid var(--kolor-linia);
+}
+.naglowek__pasek { display: flex; align-items: center; justify-content: space-between; gap: var(--odstep); min-height: 4rem; flex-wrap: wrap; }
+.logo { font-family: var(--font-naglowek); font-weight: 600; font-size: 1.25rem; color: var(--kolor-tekst); text-decoration: none; }
+.logo:hover { color: var(--kolor-akcent); }
+
+/* Bez JS menu jest zwykłą listą linków pod logo */
+.menu { list-style: none; margin: 0; padding: 0 0 0.75rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; width: 100%; }
+.menu a { color: var(--kolor-tekst); text-decoration: none; padding: 0.4rem 0; display: inline-block; font-weight: 700; }
+.menu a:hover { color: var(--kolor-akcent); text-decoration: underline; text-underline-offset: 0.3em; }
+
+/* Na telefonie nawigacja zajmuje całą szerokość pod logo i przyciskiem */
+.naglowek nav { flex: 0 0 100%; order: 3; }
+
+.menu-przycisk { display: none; }
+
+/* Z JS (klasa .js na <html>) menu chowa się pod hamburgerem */
+.js .menu-przycisk {
+  display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
+  width: 2.75rem; height: 2.75rem; padding: 0.6rem;
+  background: transparent; border: 2px solid var(--kolor-tekst); border-radius: 999px; cursor: pointer;
+}
+.menu-przycisk__kreska { display: block; height: 2px; background: var(--kolor-tekst); }
+.js .menu { display: none; flex-direction: column; }
+.js .menu.otwarte { display: flex; }
+
+@media (min-width: 56rem) {
+  .naglowek__pasek { flex-wrap: nowrap; }
+  .naglowek nav { flex: 0 1 auto; order: 0; }
+  .menu, .js .menu { display: flex; flex-direction: row; width: auto; padding: 0; }
+  .js .menu-przycisk { display: none; }
+}
+
+/* ---------- Sekcje ---------- */
+.sekcja { padding: var(--odstep-sekcji) 0; }
+.sekcja--alt { background: var(--kolor-tlo-alt); }
+.sekcja__opis { color: var(--kolor-tekst-jasny); max-width: 40rem; }
+
+.dwie-kolumny { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 48rem) { .dwie-kolumny { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+
+/* Godziny */
+.godziny { border-collapse: collapse; width: 100%; max-width: 26rem; margin-bottom: var(--odstep); }
+.godziny th, .godziny td { padding: 0.6rem 0; border-bottom: 1px solid var(--kolor-linia); text-align: left; }
+.godziny td { text-align: right; }
+
+address { font-style: normal; margin-bottom: var(--odstep); }
+
+/* ---------- Formularz (wersja demo: niczego nie wysyła) ---------- */
+.formularz { max-width: 36rem; }
+.pole { margin-bottom: var(--odstep); }
+.pole label { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+.pole input[type="text"], .pole input[type="tel"], .pole input[type="email"], .pole textarea {
+  width: 100%; padding: 0.75rem 1rem; font: inherit; color: inherit;
+  background: #ffffff; border: 2px solid var(--kolor-tekst-jasny); border-radius: var(--promien);
+}
+.pole textarea { min-height: 9rem; resize: vertical; }
+.podpowiedz { color: var(--kolor-tekst-jasny); font-size: 0.9rem; }
+
+.komunikat { margin-top: var(--odstep); padding: 0.75rem 1rem; border-radius: var(--promien); border: 2px solid; font-weight: 700; }
+.komunikat[hidden] { display: none; }
+.komunikat--ok { color: var(--kolor-sukces); border-color: var(--kolor-sukces); }
+.komunikat--blad { color: var(--kolor-blad); border-color: var(--kolor-blad); }
+
+/* ---------- Stopka ---------- */
+.stopka { background: var(--kolor-ciemny); color: var(--kolor-na-ciemnym); padding: 2.5rem 0; font-size: 0.95rem; }
+.stopka a { color: var(--kolor-na-ciemnym); }
+.stopka p { margin: 0 0 0.5rem; }
+
+/* Strony tekstowe (polityka, 404) */
+.strona-tekst { padding: 3rem 0; max-width: 46rem; }
+.strona-tekst h2 { margin-top: 2rem; font-size: 1.5rem; }
+
+/* ==========================================================
+   BLOK: KAWIARNIA – układy sekcji specyficzne dla tego dema
+   (hero dzielony, karta menu, torty, mozaika, opinie, stopka)
+   ========================================================== */
+
+/* Hero dzielone: tekst po lewej, zdjęcie w łuku po prawej */
+.hero { padding: 3rem 0 var(--odstep-sekcji); }
+.hero__siatka { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 56rem) { .hero__siatka { grid-template-columns: 1.1fr 0.9fr; gap: 4rem; } }
+.hero__nadtytul { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; color: var(--kolor-akcent); margin-bottom: 0.75rem; }
+.hero__haslo { font-size: 1.25rem; max-width: 32rem; margin-bottom: 1.75rem; color: var(--kolor-tekst-jasny); }
+.hero__przyciski { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.hero__obraz {
+  width: 100%; max-width: 30rem; margin: 0 auto;
+  aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 50% 50% var(--promien-duzy) var(--promien-duzy) / 35% 35% var(--promien-duzy) var(--promien-duzy);
+}
+
+/* O nas: zdjęcie po lewej, tekst po prawej */
+.o-nas__obraz { border-radius: var(--promien-duzy); width: 100%; aspect-ratio: 9 / 7; object-fit: cover; }
+@media (min-width: 48rem) { .o-nas__obraz { order: -1; } }
+.cytat-reczny { font-family: var(--font-naglowek); font-style: italic; font-size: 1.375rem; color: var(--kolor-akcent); margin-top: 1.5rem; }
+
+/* Karta menu */
+.menu-karta { background: #fffdf8; border: 1px solid var(--kolor-linia); border-radius: var(--promien-duzy); padding: 2rem 1.25rem; }
+@media (min-width: 48rem) { .menu-karta { padding: 3rem; } }
+.menu-karta__naglowek { text-align: center; margin-bottom: 2.5rem; }
+.menu-karta__naglowek h2 { margin-bottom: 0.5rem; }
+.menu-karta__naglowek p { color: var(--kolor-tekst-jasny); margin: 0; }
+.menu-karta__kolumny { display: grid; gap: 2.5rem; }
+@media (min-width: 56rem) { .menu-karta__kolumny { grid-template-columns: 1fr 1fr; gap: 3rem 4rem; } }
+.menu-kategoria h3 { padding-bottom: 0.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--kolor-akcent); }
+.karta { margin: 0; }
+.karta__poz { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "nazwa kropki cena" "opis opis opis"; column-gap: 0.5rem; padding: 0.6rem 0; }
+.karta__poz::before { content: ""; grid-area: kropki; align-self: end; margin-bottom: 0.4em; border-bottom: 2px dotted var(--kolor-linia); }
+.karta dt { grid-area: nazwa; font-weight: 700; }
+.karta__cena { grid-area: cena; margin: 0; font-weight: 700; white-space: nowrap; }
+.karta__opis { grid-area: opis; margin: 0; color: var(--kolor-tekst-jasny); font-size: 0.95rem; }
+.znacznik { display: inline-block; margin-left: 0.4rem; padding: 0 0.55rem; font-size: 0.75rem; font-weight: 700; line-height: 1.6; border-radius: 999px; background: var(--kolor-akcent-blady); color: var(--kolor-akcent-ciemny); vertical-align: 0.1em; white-space: nowrap; }
+.menu-karta__uwaga { margin: 0.75rem 0 0; font-size: 0.9rem; color: var(--kolor-tekst-jasny); }
+.menu-karta__legenda { margin: 2.5rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--kolor-linia); font-size: 0.9rem; color: var(--kolor-tekst-jasny); }
+.menu-karta__legenda p { margin: 0 0 0.35rem; }
+
+/* Torty na zamówienie */
+.torty { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 48rem) { .torty { grid-template-columns: 0.9fr 1.1fr; gap: 4rem; } }
+.torty__obraz { border-radius: var(--promien-duzy); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.torty__terminy { margin: 0 0 1.5rem; padding: 1rem 1.25rem; border-left: 4px solid var(--kolor-akcent); background: var(--kolor-tlo); border-radius: 0 var(--promien) var(--promien) 0; }
+.torty__terminy p { margin: 0 0 0.25rem; }
+
+/* Galeria: mozaika */
+.galeria { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: 1fr 1fr; grid-auto-rows: 11rem; }
+.galeria li { min-height: 0; }
+.galeria img { width: 100%; height: 100%; border-radius: var(--promien); object-fit: cover; }
+.galeria__duze { grid-column: span 2; grid-row: span 2; }
+.galeria__szerokie { grid-column: span 2; }
+@media (min-width: 48rem) {
+  .galeria { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 14rem; gap: 1rem; }
+}
+
+/* Opinie */
+.opinie { display: grid; gap: 1.5rem; }
+@media (min-width: 48rem) { .opinie { grid-template-columns: repeat(3, 1fr); } }
+.opinia { margin: 0; padding: 1.5rem; background: #fffdf8; border: 1px solid var(--kolor-linia); border-radius: var(--promien-duzy); }
+.opinia p { font-family: var(--font-naglowek); font-style: italic; font-size: 1.125rem; }
+.opinia footer { font-weight: 700; }
+.opinia__uwaga { display: block; font-weight: 400; font-size: 0.85rem; color: var(--kolor-tekst-jasny); }
+@media (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
+  .opinia:nth-child(odd) { transform: rotate(-1deg); }
+  .opinia:nth-child(even) { transform: rotate(1deg); }
+}
+
+/* Odwiedź nas */
+.instagram { display: inline-flex; align-items: center; gap: 0.6rem; }
+.instagram svg { width: 1.25rem; height: 1.25rem; flex: none; }
+
+/* Stopka: wyraźna informacja o demo */
+.stopka__demo { margin-bottom: 1.5rem; padding: 1rem 1.25rem; border: 2px solid var(--kolor-na-ciemnym); border-radius: var(--promien); font-weight: 700; font-size: 1.05rem; }
+.stopka__demo p { margin: 0; }
+
+/* ---------- Animacje (tylko gdy użytkownik ich nie wyłączył) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .przycisk { transition: background-color 0.2s, color 0.2s; }
+  @keyframes wjazd { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: none; } }
+  .hero__tresc, .hero__obraz { animation: wjazd 0.8s ease-out both; }
+  .hero__obraz { animation-delay: 0.15s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
