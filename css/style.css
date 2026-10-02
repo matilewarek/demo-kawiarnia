@@ -163,6 +163,9 @@ address { font-style: normal; margin-bottom: var(--odstep); }
   width: 100%; padding: 0.75rem 1rem; font: inherit; color: inherit;
   background: #ffffff; border: 2px solid var(--kolor-tekst-jasny); border-radius: var(--promien);
 }
+.pole--zgoda { display: flex; gap: 0.6rem; align-items: flex-start; }
+.pole--zgoda input { width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; flex: none; }
+.pole--zgoda label { font-weight: 400; margin: 0; }
 .pole textarea { min-height: 9rem; resize: vertical; }
 .podpowiedz { color: var(--kolor-tekst-jasny); font-size: 0.9rem; }
 

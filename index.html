@@ -493,7 +493,7 @@
             <p>
               <a
                 class="przycisk przycisk--kontur instagram"
-                href="[LINK INSTAGRAM]"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -541,6 +541,7 @@
                 type="text"
                 id="imie"
                 name="imie"
+                required
                 maxlength="80"
                 autocomplete="off"
               />
@@ -551,6 +552,7 @@
                 type="email"
                 id="email"
                 name="email"
+                required
                 maxlength="120"
                 autocomplete="off"
               />
@@ -560,9 +562,24 @@
               <textarea
                 id="wiadomosc"
                 name="wiadomosc"
+                required
                 maxlength="1500"
                 rows="6"
               ></textarea>
+            </div>
+            <div class="pole pole--zgoda">
+              <input
+                type="checkbox"
+                id="zgoda"
+                name="zgoda_rodo"
+                value="tak"
+                required
+              />
+              <label for="zgoda"
+                >Zapoznałem(-am) się z
+                <a href="/polityka-prywatnosci.html">polityką prywatności</a
+                >.</label
+              >
             </div>
             <button class="przycisk" type="submit" id="wyslij" disabled>
               Wyślij

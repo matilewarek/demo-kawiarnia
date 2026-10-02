@@ -36,6 +36,7 @@ if (formularz) {
 
   formularz.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!formularz.reportValidity()) return;
     komunikat.textContent =
       "To jest wersja demonstracyjna – formularz w prawdziwej stronie wysyła wiadomość prosto na maila firmy";
     komunikat.className = "komunikat komunikat--ok";
